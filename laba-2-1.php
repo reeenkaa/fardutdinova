@@ -31,32 +31,28 @@
  {
 	$rez[10+$i]=$kvd[$i];
  };
- for ($j=1; $j<=20; $j++) 
- {
-	 echo $rez[$j].' ';
-	 };
+  echo '<pre>';
+ print_r($rez);
+ echo '</pre>';
 ?>
-<p> 4 - Сортировка массива </p>
+<p> 4 - Сортировка массива: </p>
 <?php 
  sort($rez);
- for ($j=0; $j<=20; $j++) 
- {
-	 echo $rez[$j].' ';
-	 };
+   echo '<pre>';
+ print_r($rez);
+ echo '</pre>';
 ?>
-<p> 5 - Удаление первого элемента массива </p>
+<p> 5 - Удаление первого элемента массива: </p>
 <?php 
  unset($rez[1]);
- for ($j=0; $j<=20; $j++) 
- {
-	 echo $rez[$j].' ';
-	 };
+   echo '<pre>';
+ print_r($rez);
+ echo '</pre>';
 ?>
-<p> 6 - Удаление повторяющихся элементов массива </p>
+<p> 6 - Удаление повторяющихся элементов массива: </p>
 <?php 
  $rez1=array_unique($rez);
- for ($j=0; $j<=20; $j++) 
- {
-	 echo $rez1[$j].' ';
-	 };
+   echo '<pre>';
+ print_r($rez1);
+ echo '</pre>';
 ?>
