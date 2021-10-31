@@ -12,16 +12,16 @@ for ($i = 0; $i <= $n-1; $i++)
  {
 	 echo $mas[$j].' ';
 	 };
-?>
+ ?>
 <?php
-
 for ($i=0; $i=$n-1;$i++)
 {
 	$x=1;
-	for ($j=1; $j=$n-1;$j++)
+	for ($j=0; $j=$n-1; $j++)
 	{
-		if ($mas[$j-1]==$mas[$j])
+		if($mas[i]==$mas[j]){
 			$x=$x+1;
+		};
 	};
 	$mas1[$i]=$x;
 }
