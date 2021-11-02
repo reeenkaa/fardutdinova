@@ -5,3 +5,4 @@ if ($a) { echo '$a='."$a - истина<br>"; }
 if ($b) { echo '$b='."$b - истина<br>"; }
  else { echo '$b='."$b - ложь<br>"; }
 ?>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
