@@ -6,3 +6,4 @@ for ($i=$a; $i<=$b; ++$i) {
  echo($a . "<br>");
  $a=++$a; }
 ?>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
