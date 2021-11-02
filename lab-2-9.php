@@ -17,3 +17,4 @@ for ($i=1; $i<=10; $i++) { // запускаем первый цикл
 </TABLE>
 </BODY>
 </HTML>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
