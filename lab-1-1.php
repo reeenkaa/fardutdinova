@@ -9,3 +9,4 @@
  $var4=123;
  var_dump ($var4);
 ?>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
