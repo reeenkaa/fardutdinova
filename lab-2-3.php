@@ -9,3 +9,4 @@ default:
  echo 'Ответ не найден ' ;
 }
 ?>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
