@@ -7,3 +7,4 @@ echo($a . "<br>");
 $a=++$a; }
 while ($a<=$b);
 ?>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
