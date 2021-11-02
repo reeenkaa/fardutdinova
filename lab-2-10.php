@@ -18,3 +18,4 @@ else {echo ($p);}
 </TABLE>
 </BODY>
 </HTML>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
