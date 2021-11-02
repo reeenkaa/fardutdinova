@@ -11,3 +11,4 @@ case 6: print ("это суббота"); break;
 case 7: print ("это воскресенье");
 }
 ?>
+ <p><a href="http://fardutdinova:8080/index.php ">Главное меню</a></p>
