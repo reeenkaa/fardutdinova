@@ -1,20 +1,29 @@
 ﻿<html>
 <head>
-<title>if</title>
+<title>Фардутдинова Р.Р.</title>
 </head>
 <body>
 <script language="JavaScript" type="text/JavaScript">
-var x, y;
-x=parseInt(prompt("Введите значение х",'')); // метод parseInt() переводит
-строку в целое
+var x, y,password;
+password = 12344321;
+p=prompt ("Пароль!","********");
+if(password==p){
+alert("Пароль верный");
+}
+else{
+alert("Пароль неверный");
+}
+x=parseInt(prompt("Введите значение х",'')); // метод parseInt() переводит строку в целое
 y=parseInt(prompt("Введите значение у",'')); // число
 if(x<y)
 {
 alert(" Максимальное число - y");
 }
 else
-{
-alert(" Максимальное число - x");
+{ if (x==y){
+alert("Числа равны");}
+else{
+alert(" Максимальное число - x");}
 }
 </script>
 </body>
