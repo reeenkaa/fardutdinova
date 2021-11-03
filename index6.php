@@ -1,0 +1,1 @@
+<li><a href="http://fardutdinova:8080/index.php">Главное меню</a><li>
