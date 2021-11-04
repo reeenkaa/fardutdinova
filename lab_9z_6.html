@@ -1,0 +1,35 @@
+﻿<body id="p">
+</body>
+<head><title>Фардутдинова Р.Р.</title></head>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+var vote=[0,0,0,0,0,0,0];
+var sum=0;
+function ch(rad_id){
+sum+=1;
+vote[rad_id]++;
+var podschet = [
+"Есенин  "+ vote[0]/sum*100+"%",
+"Пушкин  "+ vote[1]/sum*100+"%",
+"Лермонтов  "+ vote[2]/sum*100+"%",
+"Бунин  "+ vote[3]/sum*100+"%",
+"Булгаков  "+ vote[4]/sum*100+"%",
+"Толстой  "+ vote[5]/sum*100+"%",
+"Гоголь  "+ vote[6]/sum*100+"%",
+]
+console.log(podschet)
+document.getElementById('result').innerHTML = podschet;
+}
+</script>
+<h3>Опрос</h3>
+<form id='moroz' action="" method="post">
+<p>Какой русский писатель/поэт по вашему мнению самый талантливый?</p>
+<p><input type="radio" name="poll" value="0" id="podschet0" onclick="ch(0);"/><label for='podschet0'> Есенин</label></p>
+<p><input type="radio" name="poll" value="1" id="podschet1" onclick="ch(1);"/><label for='podschet1'> Пушкин</label></p>
+<p><input type="radio" name="poll" value="2" id="podschet2" onclick="ch(2);"/><label for='podschet3'> Лермонтов</label></p>
+<p><input type="radio" name="poll" value="3" id="podschet3" onclick="ch(3);"/><label for='podschet4'> Бунин</label></p>
+<p><input type="radio" name="poll" value="4" id="podschet4" onclick="ch(4);"/><label for='podschet5'> Булгаков</label></p>
+<p><input type="radio" name="poll" value="5" id="podschet5" onclick="ch(5);"/><label for='podschet6'> Толстой</label></p>
+<p><input type="radio" name="poll" value="6" id="podschet6" onclick="ch(6);"/><label for='podschet7'> Гоголь</label><br/></p>
+<p><span id="result">Результат</span>
+</form>
