@@ -1,0 +1,31 @@
+﻿<body>
+<img id="aaa" style="position:absolute;" src="aaa.jpg"/>
+</body>
+<head><title>Фардутдинова Р.Р.</title></head>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  aaa.onmousedown = function(e) {
+  moveAt(e.pageX, e.pageY);
+  function moveAt(pageX, pageY) {
+    aaa.style.left = pageX - aaa.offsetWidth / 2 + 'px';
+    aaa.style.top = pageY - aaa.offsetHeight / 2 + 'px';
+  }
+  function onMouseMove(e) {
+    moveAt(e.pageX, e.pageY);
+  }
+  document.addEventListener('mousemove', onMouseMove);
+  aaa.onmouseup = function() {
+    document.removeEventListener('mousemove', onMouseMove);
+    aaa.onmouseup = null;
+  };
+   aaa.ondragstart = function() {
+   return false;
+};
+  console.log('x: ' + e.pageX + ' ; y: ' + e.pageY);
+};
+});
+</script>
+
+
+
