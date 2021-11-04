@@ -6,3 +6,11 @@
 </div>
 <button class="btn-slide">Нажми!</button>
 </body>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".btn-slide").click(function(){
+$("#panel").slideToggle("slow");
+$(this).toggleClass("active");
+});
+});
+</script>
