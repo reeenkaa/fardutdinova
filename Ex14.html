@@ -9,10 +9,10 @@
     </style>
 <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function validate () {
-            var p1 = document.querySelector('#пароль'),
-                p2 = document.querySelector('#повтор пароля')
+            var p1 = document.querySelector('#password'),
+                p2 = document.querySelector('#password-check')
             p1.addEventListener('input', function () {
-                this.value != p2.value ? pass2.setCustomValidity('Пароль не совпадает') : p2.setCustomValidity('')
+                this.value != p2.value ? p2.setCustomValidity('Пароль не совпадает') : p2.setCustomValidity('')
             })
             p2.addEventListener('input', function (e) {
                 this.value != p1.value ? this.setCustomValidity('Пароль не совпадает') : this.setCustomValidity('')
@@ -28,7 +28,7 @@ Email(*)<input type="email" required><br><span style="color:red" id="emailf"></s
 Тема сообщения:(*)<input type="text" size=15 required><br>
 Сообщение:<textarea minlength = "10" required></textarea> <br><br>
 <input type="submit" value="Отправить"><input type="reset" value="Очистить">
-*-необходимые для заполнения поля
+<br>*-необходимые для заполнения поля
 </form>
 </body>
 </html>
