@@ -1,0 +1,46 @@
+﻿<body>
+<img id="aaa" style="position:absolute;" src="aaa.jpg"/>
+</body>
+<head> <title>Фардутдинова Р.Р.</title>
+</head>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var cur_pos_x=0, cur_pos_y=0;
+	document.onkeydown = function(e) {
+    var wW=window.innerWidth, wH=window.innerHeight;
+ if (e.keyCode == 38) {
+    cur_pos_y-=100;
+	if(cur_pos_y<0){
+	cur_pos_y=0;
+	}
+    console.log("up arrow")
+  }
+      if (e.keyCode == 40) {
+      cur_pos_y +=100;
+	if(cur_pos_y>wH-500){
+	cur_pos_y=wH-500;
+	}
+      console.log("down arrow")
+  }
+    if (e.keyCode == 37) {
+    cur_pos_x -=100;
+	if(cur_pos_x<0){
+	cur_pos_x=0;
+	}
+    console.log("left arrow")
+  }
+    if (e.keyCode == 39) {
+      cur_pos_x +=100;
+	if(cur_pos_x>wW-500){
+	cur_pos_x=wW-500;
+	}
+    console.log("right arrow")
+  }
+    $('#aaa').animate({
+left: String(cur_pos_x)+"px",
+top: String(cur_pos_y)+"px",
+});
+}
+});
+</script>
