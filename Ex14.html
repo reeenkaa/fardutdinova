@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+<title>Фардутдинова Р.Р.</title>
+<head>
+	<style>
+        input[type=password]:invalid{
+           border: solid 2px red;
+        }
+    </style>
+<script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function validate () {
+            var p1 = document.querySelector('#пароль'),
+                p2 = document.querySelector('#повтор пароля')
+            p1.addEventListener('input', function () {
+                this.value != p2.value ? pass2.setCustomValidity('Пароль не совпадает') : p2.setCustomValidity('')
+            })
+            p2.addEventListener('input', function (e) {
+                this.value != p1.value ? this.setCustomValidity('Пароль не совпадает') : this.setCustomValidity('')
+            })
+        })
+</script>
+</head>
+<form name="form" onsubmit="return validate()">
+Ваше имя(*)<input type="text" name="name" size=15 required><span style="color:red" id="namef"></span><br/>
+Пароль(*)<input id="password" name="password" type="password" minlength = "4" size=10 required>
+Потверждение пароля(*)<input id="password-check" name="password-check" type="password" minlength = "4" size=10 required><span style="color:red" id="p2"></span><br/>
+Email(*)<input type="email" required><br><span style="color:red" id="emailf"></span>
+Тема сообщения:(*)<input type="text" size=15 required><br>
+Сообщение:<textarea minlength = "10" required></textarea> <br><br>
+<input type="submit" value="Отправить"><input type="reset" value="Очистить">
+*-необходимые для заполнения поля
+</form>
+</body>
+</html>
