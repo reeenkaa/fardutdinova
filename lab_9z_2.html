@@ -1,0 +1,88 @@
+﻿<html>
+<head>
+<style type="text/css">
+input.error {
+ border: 1px solid #ff0000;
+}
+label.error {
+ color: #ff0000;
+ font-weight: normal;
+}
+</style>
+</head>
+<body>
+	<script src="jquery-validation-1.15.1/lib/jquery.js"></script>
+	<script src="jquery-validation-1.15.1/dist/jquery.validate.js"></script>
+	<script type="text/javascript">
+$(document).ready(function(){
+    $('#form').validate({
+            rules: {
+				firstname: 'required',
+				password: {
+					required: true,
+					minlength: 4,
+				},
+				confirm_password: {
+					required: true,
+					minlength: 4,
+					equalTo: "#password",
+				},
+				email: {
+					required: true,
+					email: true,
+				},
+				msg: {
+					required: true,
+					minlength: 10,
+				},
+			},
+			messages: {
+				firstname: "Введите свое имя",
+				password: {
+					required: "Введите пароль",
+					minlength: "Пароль должен быть не менее 4 символов",
+				},
+				confirm_password: {
+					required: "Введите пароль",
+					minlength: "Пароль должен быть не менее 4 символов",
+					equalTo: "Пароль неккоректный",
+				},
+				email: "Введите свой Email",
+				msg: {
+					required: "Введите сообщение",
+					minlength: "Сообщение должно быть не быть не менее 10 символов",
+				},
+			}
+		});
+    });
+</script>
+<form id="form" method="post" action="">
+			<p>
+			<label for="firstname">Ваше имя(*)</label>
+ 				<input id="firstname" name="firstname" type="text">
+			</p>
+			<p>
+				<label for="password">Пароль(*)</label>
+				<input id="password" name="password" type="password">
+			</p>
+			<p>
+				<label for="confirm_password">Потверждение пароля(*)</label>
+				<input id="confirm_password" name="confirm_password" type="password">
+			</p>
+			<p>
+				<label for="email">Email(*)</label>
+				<input id="email" name="email" type="email">
+			</p>
+			<p>
+				<label for="msg1">Teма сообщения</label>
+				<input id="msg1" name="msg1" type="text">
+			</p>
+			<p>
+				<label for="msg">Сообщение:</label>
+				<textarea id="msg" name="msg"></textarea> 
+			</p>
+			<p>
+				<input type="submit" value="Отправить"><input type="reset" value="Очистить">
+			</p>
+	</form>
+</body>
