@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#aa').click(function(){
+		$(this).css('background', `hsl(${Math.floor(Math.random() * 340)},100%,50%)`);
+	})
+});
+</script>
+</head>
+<body id="aa">
+<input type="button" value="Поменять цвет фона" id="background_change">
+</body>
+</html>
