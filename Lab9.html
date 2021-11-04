@@ -15,6 +15,15 @@
 <button class="run">Начать движение</button>
 <div class="control_block_container">
 <div id="box">Управляемый блок</div>
+<!-- Аккордеон -->
+<div class="accordion">
+<h3>Заголовок 1</h3>
+<p><b>Блок А</b></br>АААААААААААААААААААААААААА</p>
+<h3>Заголовок 2</h3>
+<p><b>Блок Б</b></br>ББББББББББББББББББББББББББ</p>
+<h3>Заголовок 3</h3>
+<p><b>Блок В</b></br>ВВВВВВВВВВВВВВВВВВВВВВВВВВ</p>
+</div>
 </body>
 <script type="text/javascript" src="jquery-3.6.0.min.js" ></script>
 <script type="text/javascript" >
@@ -28,13 +37,21 @@ $(".delete").click(function(){      //Удаление
 $(this).parents(".pane").animate({opacity:"hide"}, "slow");
 });
 $(".run").click(function(){    //Управление элементом
-$("#box").animate ({opacity: "0.1", left:"+=4000"},1200)
+$("#box").animate ({opacity: "0.1", left:"+=400"},1200)
 .animate({opacity: "0.4", top: "+=160", height: "40", width: "40"}, "slolw")
 .animate({opacity: "1", left: "0", height: "50", width: "100"}, "slolw")
 .animate({top:"0"}, "fast")
 .slideUp()
 .slideDown("slow")
 return false;
+});
+$(".accordion h3:first").addClass("active");   //аккордеон
+$(".accordion p:not(:first)").hide();
+$(".accordion h3").click (function(){
+$(this).next ("p").slideToggle("slow")
+.siblings("p:visible").slideUp("slow");
+$(this).toggleClas("active");
+$(this).siblings("h3").removeClass("active");
 });
 </script>
 
