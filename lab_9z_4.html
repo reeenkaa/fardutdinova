@@ -1,0 +1,13 @@
+﻿<body>
+<p id="mouse"></p>
+</body>
+<head><title>Фардутдинова Р.Р.</title></head>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(window).on('mousemove', function(e) {
+  document.getElementById("mouse").innerHTML = 'x: ' + e.pageX + ' ; y: ' + e.pageY;
+  console.log('x: ' + e.pageX + ' ; y: ' + e.pageY);
+});
+});
+</script>
